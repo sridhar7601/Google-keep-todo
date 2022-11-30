@@ -1,18 +1,34 @@
 import React from 'react';
 import { MdOutlineDarkMode } from 'react-icons/md';
+import { MdOutlineWbSunny } from 'react-icons/md'
+import { useState } from 'react';
 
 const Header = ({ handleToggleDarkMode }) => {
+	const [defaultMode, setDefaultMode] = useState(true);
+	
 	return (
 		<div className='header'>
-			<h1>Notes App</h1>
-			<MdOutlineDarkMode
-				class='darkmode-icons'
-				size='1.7em'
-				onClick={() =>
-					handleToggleDarkMode(
-						(previousDarkMode) => !previousDarkMode
-					)
-				}/>
+			<h1>Iam Neo Notes</h1>
+			{defaultMode ?
+				<MdOutlineDarkMode
+					class='darkmode-icons'
+					size='1.7em'
+					onClick={() =>
+						handleToggleDarkMode(
+							(previousDarkMode) => !previousDarkMode,
+							setDefaultMode(false)
+						)
+					} /> :
+				<MdOutlineWbSunny
+					class='gradient-icons'
+					size='1.7em'
+					onClick={() =>
+						handleToggleDarkMode(
+							(previousDarkMode) => !previousDarkMode,
+							setDefaultMode(true)
+						)
+					} />
+			}
 		</div>
 	);
 };

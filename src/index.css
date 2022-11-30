@@ -5,6 +5,7 @@ body {
 		'Droid Sans', 'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
 }
 
 code {
@@ -19,7 +20,7 @@ code {
 }
 
 .dark-mode {
-	background-color: black;
+	background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 
 .dark-mode h1 {
@@ -28,6 +29,29 @@ code {
 
 .dark-mode .darkmode-icons{
 	color: white;
+}
+.dark-mode .gradient-icons{
+	color: white;
+}
+
+.dark-mode textarea{
+	border: none;
+	resize: none;
+	background-color: #DDDDDD;
+}
+.dark-mode .note.new {
+	background-color: #DDDDDD;
+}
+
+.dark-mode .note {
+	background-color: #566387b6;
+	border-radius: 10px;
+	padding: 1rem;
+	min-height: 170px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	white-space: pre-wrap;
 }
 
 .container {
