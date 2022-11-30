@@ -1,7 +1,6 @@
-import React from 'react';
-import { MdOutlineDarkMode } from 'react-icons/md';
-import { MdOutlineWbSunny } from 'react-icons/md'
-import { useState } from 'react';
+import {React,useState} from 'react';
+import { MdOutlineDarkMode, MdOutlineWbSunny  } from 'react-icons/md';
+
 
 const Header = ({ handleToggleDarkMode }) => {
 	const [defaultMode, setDefaultMode] = useState(true);
